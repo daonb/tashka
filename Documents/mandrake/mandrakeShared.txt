@@ -36,3 +36,96 @@ make changes:
 get changes:
         git pull origin master
 
+ssh & git: remote howto
+=======================
+
+try and open an ssh connection with github:
+
+        $ ssh git@github.com
+        Permission denied (publickey).
+
+Although github disallows this, authentication is performed,
+so we can test if our key settings are acceptable.
+
+the ssh-agent is used to manage key/password combinations
+for ssh sessions. 
+
+start the agent:
+
+        $ eval `ssh-agent` 
+        Agent pid 4620
+
+        $ ps ax | grep ssh-agent
+             4620       1    4620       4620    ? 1000 10:11:54 /usr/bin/ssh-agent
+
+this will populate the shell with the appropriate enviro vars for ssh-add and ssh.
+
+show identity:
+
+        $ ssh-add -l
+        The agent has no identities.
+
+assume (default identity:
+
+        $ ssh-add   
+        Enter passphrase for /home/ets/.ssh/id_rsa: 
+        Identity added: /home/ets/.ssh/id_rsa (/home/ets/.ssh/id_rsa)
+
+        $ ssh-add -l
+        2048 44:cf:0a:84:53:38:da:af:d5:59:f7:04:84:18:03:f1 /home/ets/.ssh/id_rsa (RSA)
+
+
+the default identity created by `ssh-gen -t rsa`:
+
+        -rw------- 1 ets None 1.8K Feb 19 10:00 /home/ets/.ssh/id_rsa
+        -rw-r--r-- 1 ets None  398 Feb 19 10:00 /home/ets/.ssh/id_rsa.pub
+
+try to connect again via ssh:
+
+        $ ssh git@github.com
+        Permission denied (publickey).
+
+we need to add this key at [https://github.com/account]
+
+        $ cat ~/.ssh/id_rsa.pub
+
+now connection via ssh works:
+
+        $ ssh git@github.com
+        PTY allocation request failed on channel 0
+        Hi gglynne! You've successfully authenticated, but GitHub does not provide shell access.
+                Connection to github.com closed.
+
+public clone urls begin with `git://..`:
+
+        git://github.com/gglynne/tashka.git
+
+private clone urls begin with `git@github..`
+
+        git@github.com:gglynne/tashka.git
+
+
+
+`git clone` works on public & private & creates a subdir `tashka`):
+
+        $ git clone git://github.com/gglynne/tashka.git
+
+`git pull` works on public & private & restores files to their original places!!!:
+
+        $ git pull git://github.com/gglynne/tashka.git
+
+to persist changes to github:
+
+        $ git commit -a -m 'test at ets'
+        Created commit cddb2af: test at ets
+         1 files changed, 1 insertions(+), 0 deletions(-)
+
+        $ git push origin master
+        Counting objects: 5, done.
+        Compressing objects: 100% (3/3), done.
+        Writing objects: 100% (3/3), 379 bytes, done.
+        Total 3 (delta 1), reused 0 (delta 0)
+        To git@github.com:gglynne/tashka.git
+           719cbd4..cddb2af  master -> master
+
+
