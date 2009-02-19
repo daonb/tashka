@@ -1,1 +1,38 @@
-test
+git howto
+---------
+
+create a key pair:
+        ssh-keygen -t rsa
+
+install git:
+        sudo aptitude install git-core
+
+configure git:
+        git config --global user.email "gglynne@yahoo.com"
+        git config --global user.name "gglynne"
+
+create a local repository:
+        git init
+        git add .bashrc
+        git commit -m 'first commit'
+
+publish repository:
+        git remote add origin git@github.com:gglynne/tashka.git
+        git push origin master
+
+test:
+        mkdir repo
+        cd repo
+        git init
+        git pull git@github.com:gglynne/tashka.git
+        git remote add origin git@github.com:gglynne/tashka.git
+
+make changes:
+        git add .vimrc
+        git status
+        git commit -m 'added vimrc'
+        git push origin master
+
+get changes:
+        git pull origin master
+
