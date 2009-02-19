@@ -1,0 +1,18 @@
+#change the hardstatus settings to give an window list at the bottom of the 
+#screen, with the time and date and with the current window highlighted 
+hardstatus alwayslastline 
+hardstatus string '%{= mK}%-Lw%{= KW}%50>%n%f* %t%{= mK}%+Lw%< %{= kG}%-=%D %d %M %Y %c:%s%{-}' 
+
+# save a huge scrollback buffer
+defscrollback 5000
+
+# google in tab
+bind g screen -t google    0 w3m www.google.com
+
+# radio in tab
+bind r screen -t pyradio 0 python /home/gglynne/scripts/pyradio
+
+# insert timestamp
+bind d exec .!. date
+
+
