@@ -52,7 +52,7 @@ test:
         cd repo
         git init
         git pull git@github.com:gglynne/tashka.git
-        git remote add origin git@github.com:gglynne/tashka.git
+        git emote add origin git@github.com:gglynne/tashka.git
 
 make changes:
         git add .vimrc
