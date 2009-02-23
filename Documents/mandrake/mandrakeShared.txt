@@ -1,3 +1,30 @@
+master plan
+-----------
+etas
+winforms ui + database backend + pdf report generation + 
+
+
+
+
+
+visual studio+ embedded firebird
+=================================
+
+recreate data connection in server explorer:
+
+1. build etas.Data.dll
+2. createEmbeddedDatabaseAuto from nunit
+3. add connection in server explorer
+	Database: D:\etas\etas\bin\Debug\DB.ETS
+	Server Type: Super/Classic
+	Datasource: localhost
+	User, Password
+
+
+vim yankring
+=============
+after paste, press <C-P> to cycle through yankring
+
 git howto
 ---------
 
