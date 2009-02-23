@@ -34,12 +34,15 @@ create a key pair:
 install git:
         sudo aptitude install git-core
 
-configure git:
+configure git global:
         git config --global user.email "gglynne@yahoo.com"
         git config --global user.name "gglynne"
 
+
+
 create a local repository:
         git init
+	git config status.showUntrackedFiles 'no'
         git add .bashrc
         git commit -m 'first commit'
 
@@ -57,8 +60,7 @@ test:
 make changes:
         git add .vimrc
         git status
-        git commit -m 'added vimrc'
-        git push origin master
+	git commit -a -m "etas@`date`" && git push origin master
 
 get changes:
         git pull origin master
