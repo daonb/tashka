@@ -1,3 +1,37 @@
+singapore geography
+-------------------
+
+MALAYSIA
+
+Tanjung Piai    Johor Bahru      Tanjung Belungkor
+
+--------------------------------------------------
+
+                SINGAPORE
+
+                Sentosa Island
+
+------------------------------------------------------
+
+
+Karimun                 Batam                   Bintan
+
+Tanjung Balai                                   Tanjung Pinang
+
+INDONESIA
+
+
+Tanjung=Cape
+map: http://www.temasekmap.com/articles.htm
+
+
+mono 
+----
+porting:http://www.fluidscape.co.nz/?q=node/50
+
+xsd.exe Passwords.xsd /d /namespace:NoX
+
+
 git howto
 ---------
 
