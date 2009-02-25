@@ -24,13 +24,21 @@ INDONESIA
 Tanjung=Cape
 map: http://www.temasekmap.com/articles.htm
 
+recreate data connection in server explorer:
 
 mono 
 ----
 porting:http://www.fluidscape.co.nz/?q=node/50
+	Database: D:\etas\etas\bin\Debug\DB.ETS
+	Server Type: Super/Classic
+	Datasource: localhost
+	User, Password
 
 xsd.exe Passwords.xsd /d /namespace:NoX
 
+vim yankring
+=============
+after paste, press <C-P> to cycle through yankring
 
 git howto
 ---------
@@ -41,12 +49,15 @@ create a key pair:
 install git:
         sudo aptitude install git-core
 
-configure git:
+configure git global:
         git config --global user.email "gglynne@yahoo.com"
         git config --global user.name "gglynne"
 
+
+
 create a local repository:
         git init
+	git config status.showUntrackedFiles 'no'
         git add .bashrc
         git commit -m 'first commit'
 
@@ -59,13 +70,12 @@ test:
         cd repo
         git init
         git pull git@github.com:gglynne/tashka.git
-        git remote add origin git@github.com:gglynne/tashka.git
+        git emote add origin git@github.com:gglynne/tashka.git
 
 make changes:
         git add .vimrc
         git status
-        git commit -m 'added vimrc'
-        git push origin master
+	git commit -a -m "etas@`date`" && git push origin master
 
 get changes:
         git pull origin master
@@ -130,7 +140,7 @@ now connection via ssh works:
         Hi gglynne! You've successfully authenticated, but GitHub does not provide shell access.
                 Connection to github.com closed.
 
-public clone urls begin with `git://..`:
+publicï¿½clone urls begin with `git://..`:
 
         git://github.com/gglynne/tashka.git
 
