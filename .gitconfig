@@ -1,0 +1,5 @@
+[user]
+	email = gglynne@yahoo.com
+	name = gglynne
+[merge]
+	tool = kdiff3
