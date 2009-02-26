@@ -50,6 +50,19 @@ checkout a copy of the repos:
         git clone remote origin
         git clone git@github.com:gglynne/tashka.git
 
+make a change and commit back:
+
+        git commit -a -m 'homme'
+        git push
+
+pull modified version onto another machine as a branch:
+        To git@github.com:gglynne/tashka.git
+        ! [rejected]        master -> master (non-fast forward)
+        error: failed to push some refs to 'git@github.com:gglynne/tashka.git'
+
+why?
+
+
 
 
 
