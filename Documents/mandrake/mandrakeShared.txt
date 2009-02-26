@@ -1,4 +1,53 @@
-::singapore geography
+vi:syntax=mkd
+
+
+
+
+http://geekswithblogs.net/clemmon/archive/2006/01/10/65473.aspx
+
+If the AssemblyInformationalVersion attribute is applied to the base
+executable, the ProductVersion property and its dependent properties will use
+this value instead of the AssemblyVersion attribute value.
+
+Microsoft states that this behaviour is by design.
+
+
+etas.MainClass
+===============
+
+assembly.GetName().Version = 1.0.0.1 = D:\etas\etas\Properties\AssemblyInfo.cs = [assembly: AssemblyVersion("1.0.0.1")]
+
+
+ zork.Configurator.settings.programVersio
+'etas.Data.Configurator.Settings' does not contain a definition for 'programVersio'
+ zork.Configurator.settings.programVersion
+{2.0.0.3}
+    Build: 0
+    Major: 2
+    MajorRevision: 0
+    Minor: 0
+    MinorRevision: 3
+    Revision: 3
+
+
+
+Application.ProductVersion
+"2.4.8.0"
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+singapore geography
 -------------------
 
 MALAYSIA
@@ -38,7 +87,20 @@ xsd.exe Passwords.xsd /d /namespace:NoX
 
 vim yankring
 =============
-after paste, press <C-P> to cycle through yankring
+after paste, press <M-P>, <M-N> to cycle through yankring
+
+
+vimdiff
+========
+
+dark blue  = added
+light blue = filled (deleted)
+red        = conflict
+
+`]c`       = next change
+`[c`       = previous hange
+:diffput   = apply
+:diffge    = apply
 
 vim nerdcommenter
 =================
@@ -105,14 +167,16 @@ pull changes from repo (aka cvs update):
 		git pull origin
 
 show branches
-git branch
+
+	git branch
 
 create branch
-git branch cleanup
 
-merge branch with current
-git checkout master
-git merge cleanup
+	git branch cleanup
+
+m:erge branch with current
+	git checkout master
+	git merge cleanup
 
 push from one branch to another:
 

@@ -141,11 +141,14 @@ set bex=.bak
 " if only i knew about this one at the beginning...
 imap jj <Esc>
 
-" C-N = next bufer
-map <C-n> :exe  ":buf ".((bufnr("%") % bufnr("$"))+1)<CR> 
+let g:yankring_replace_n_pkey = '<m-p>'
+let g:yankring_replace_n_nkey = '<m-n>'
 
 " C-P = previous bufer
 map <C-p> :exe  ":buf ".(bufnr('%') == 1 ? bufnr('$') : bufnr('%')-1)<CR>
+
+" C-n = cycle buffers. Note that <C-6> switches to previously displayed.
+map <C-n> :exe  ":buf ".((bufnr("%") % bufnr("$"))+1)<CR>
 
 " S-K : google the word under the cursor
 set keywordprg=~/scripts/google.sh
@@ -162,9 +165,6 @@ nmap cd <c-a>
 
 " space = page down
 noremap <space> <c-d>
-
-" C-n = cycle buffers. Note that <C-6> switches to previously displayed.
-map <C-n> :exe  ":buf ".((bufnr("%") % bufnr("$"))+1)<CR>
 
 " f1 = try and play the file name at the cursor (xxx.ext) with mpplayer
 map <f1> 0veeey:!mplayer -fs <C-R>"<Esc><Esc>j
@@ -196,7 +196,9 @@ map vv "zyw<C-w>wo<Esc>"zgpzz<C-w>w
 nnoremap <silent> <f8> :TlistToggle<CR> 
 
 " f9 = change tab completion
+let g:SuperTabDefaultCompletionType = "<C-N>"
 nnoremap <f9> :SuperTabHelp<cr>
+"inoremap ii <Esc>i<Right><C-R>=ExpandSnippet()<CR>
 
 " f10 = filter thru markdown and preview in firefox 
 nmap <f10> :w<cr>:!markdown % > %.html && firefox %.html<cr>
