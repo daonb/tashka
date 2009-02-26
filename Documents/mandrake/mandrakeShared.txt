@@ -1,3 +1,52 @@
+vi:syntax=mkd
+
+
+
+
+http://geekswithblogs.net/clemmon/archive/2006/01/10/65473.aspx
+
+If the AssemblyInformationalVersion attribute is applied to the base
+executable, the ProductVersion property and its dependent properties will use
+this value instead of the AssemblyVersion attribute value.
+
+Microsoft states that this behaviour is by design.
+
+
+etas.MainClass
+===============
+
+assembly.GetName().Version = 1.0.0.1 = D:\etas\etas\Properties\AssemblyInfo.cs = [assembly: AssemblyVersion("1.0.0.1")]
+
+
+ zork.Configurator.settings.programVersio
+'etas.Data.Configurator.Settings' does not contain a definition for 'programVersio'
+ zork.Configurator.settings.programVersion
+{2.0.0.3}
+    Build: 0
+    Major: 2
+    MajorRevision: 0
+    Minor: 0
+    MinorRevision: 3
+    Revision: 3
+
+
+
+Application.ProductVersion
+"2.4.8.0"
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
 singapore geography
 -------------------
 
@@ -38,30 +87,109 @@ xsd.exe Passwords.xsd /d /namespace:NoX
 
 vim yankring
 =============
-after paste, press <C-P> to cycle through yankring
+after paste, press <M-P>, <M-N> to cycle through yankring
 
+
+vimdiff
+========
+
+dark blue  = added
+light blue = filled (deleted)
+red        = conflict
+
+`]c`       = next change
+`[c`       = previous hange
+:diffput   = apply
+:diffge    = apply
+
+vim nerdcommenter
+=================
+,cc       : comment
+,cu       : uncomment
+,c<Space> : toggle
+,cs       : comment 'sexily'
 
 everyday git
 =============
 
-checkout a copy of the repos:
+make a central repo:
 
-        mkdir test; cd test
-        git clone remote origin
-        git clone git@github.com:gglynne/tashka.git
+	mkdir repo
+	cd repo
+	git init
+	touch README
+	git add README
+	git commit -m 'added README'
 
-make a change and commit back:
 
-        git commit -a -m 'homme'
-        git push
+if the repos is empty (no initial commit), get an error:
 
-pull modified version onto another machine as a branch:
-        To git@github.com:gglynne/tashka.git
-        ! [rejected]        master -> master (non-fast forward)
-        error: failed to push some refs to 'git@github.com:gglynne/tashka.git'
+	warning: remote HEAD refers to nonexistent ref, unable to checkout
 
-why?
 
+To set up a repository 'public.git' on a server you should clone an existing 
+repository using the '--bare' option:
+
+	git clone --bare existing public.git
+
+A bare repository is one without a checked out working copy of the code. It
+only contains the git database. As a general rule you should never push into a
+repository that contains changes in the working copy. To ensure this doesn't
+happen, we're making the server repository a bare repository - it has no
+working copy.
+[See ](http://www.bluishcoder.co.nz/2007/09/how-to-publish-git-repository.html)
+
+
+
+checkout a local copy:
+
+	git clone repo bob
+
+make changes:
+
+	cd bob
+	touch a
+	git add a
+	git commit -m 'bob added a'
+	git status
+
+push changes to repo:
+
+		git push ../repo master:master
+	or
+
+		git push origin master
+
+pull changes from repo (aka cvs update):
+
+		git pull ../repo master:master
+	or
+		git pull origin
+
+show branches
+
+	git branch
+
+create branch
+
+	git branch cleanup
+
+m:erge branch with current
+	git checkout master
+	git merge cleanup
+
+push from one branch to another:
+
+	git push <branch to push from>:<branch to push to>
+
+
+The kernel.org manpage for git pull core/docs/git push.html#URLS will rather
+cryptically tell you that “The canonical format of a <refspec> parameter is
++?<src>:<dst>”. Most of the time this translates to <branch to push
+from>:<branch to push to>. The branch to push from and the colon are optional.
+If left out, git will push from the local branch to the remote branch of the
+same name. If no refspec is used at all, git will push all “heads” (f.e.
+branches) on the local to matching heads that exist on the remote.
 
 
 

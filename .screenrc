@@ -15,4 +15,4 @@ bind r screen -t pyradio 0 python /home/gglynne/scripts/pyradio
 # insert timestamp
 bind d exec .!. date
 
-
+# bind [6~A ^u
