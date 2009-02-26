@@ -29,11 +29,7 @@ set scrolloff=4
 
 " easy on eyes
 
-if has("gui_running")
-        colorscheme darkblue
-else
-        colorscheme ron
-endif
+colorscheme darkblue
 
 
 " -------------------- overall appearance ----------------------

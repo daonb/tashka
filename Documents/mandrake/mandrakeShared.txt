@@ -1,4 +1,4 @@
-singapore geography
+::singapore geography
 -------------------
 
 MALAYSIA
@@ -44,24 +44,74 @@ after paste, press <C-P> to cycle through yankring
 everyday git
 =============
 
-checkout a copy of the repos:
+make a central repo:
 
-        mkdir test; cd test
-        git clone remote origin
-        git clone git@github.com:gglynne/tashka.git
+	mkdir repo
+	cd repo
+	git init
+	touch README
+	git add README
+	git commit -m 'added README'
 
-make a change and commit back:
 
-        git commit -a -m 'homme'
-        git push
+if the repos is empty (no initial commit), get an error:
 
-pull modified version onto another machine as a branch:
-        To git@github.com:gglynne/tashka.git
-        ! [rejected]        master -> master (non-fast forward)
-        error: failed to push some refs to 'git@github.com:gglynne/tashka.git'
+	warning: remote HEAD refers to nonexistent ref, unable to checkout
 
-why?
 
+To set up a repository 'public.git' on a server you should clone an existing 
+repository using the '--bare' option:
+
+	git clone --bare existing public.git
+
+A bare repository is one without a checked out working copy of the code. It
+only contains the git database. As a general rule you should never push into a
+repository that contains changes in the working copy. To ensure this doesn't
+happen, we're making the server repository a bare repository - it has no
+working copy.
+[See ](http://www.bluishcoder.co.nz/2007/09/how-to-publish-git-repository.html)
+
+
+
+checkout a local copy:
+
+	git clone repo bob
+
+make changes:
+
+	cd bob
+	touch a
+	git add a
+	git commit -m 'bob added a'
+	git status
+
+push changes to repo:
+
+		git push ../repo master:master
+	or
+
+		git push origin master
+
+pull changes from repo (aka cvs update):
+
+		git pull ../repo master:master
+	or
+		git pull origin
+
+
+
+push from one branch to another:
+
+	git push <branch to push from>:<branch to push to>
+
+
+The kernel.org manpage for git pull core/docs/git push.html#URLS will rather
+cryptically tell you that “The canonical format of a <refspec> parameter is
++?<src>:<dst>”. Most of the time this translates to <branch to push
+from>:<branch to push to>. The branch to push from and the colon are optional.
+If left out, git will push from the local branch to the remote branch of the
+same name. If no refspec is used at all, git will push all “heads” (f.e.
+branches) on the local to matching heads that exist on the remote.
 
 
 
