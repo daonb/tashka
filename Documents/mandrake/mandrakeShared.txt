@@ -40,6 +40,19 @@ vim yankring
 =============
 after paste, press <C-P> to cycle through yankring
 
+
+everyday git
+=============
+
+checkout a copy of the repos:
+
+        mkdir test; cd test
+        git clone remote origin
+        git clone git@github.com:gglynne/tashka.git
+
+
+
+
 git howto
 ---------
 
@@ -52,8 +65,6 @@ install git:
 configure git global:
         git config --global user.email "gglynne@yahoo.com"
         git config --global user.name "gglynne"
-
-
 
 create a local repository:
         git init
@@ -70,7 +81,7 @@ test:
         cd repo
         git init
         git pull git@github.com:gglynne/tashka.git
-        git emote add origin git@github.com:gglynne/tashka.git
+        git remote add origin git@github.com:gglynne/tashka.git
 
 make changes:
         git add .vimrc
