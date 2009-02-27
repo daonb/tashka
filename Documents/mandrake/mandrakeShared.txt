@@ -1,6 +1,6 @@
-# vi :syntax=mkd
+# vi:syntax=mkd
 
-c# assembly version
+c# assembly versions
 ====================
 
 http://geekswithblogs.net/clemmon/archive/2006/01/10/65473.aspx
@@ -11,23 +11,6 @@ this value instead of the AssemblyVersion attribute value.
 
 Microsoft states that this behaviour is by design.
 
-assembly.GetName().Version = 1.0.0.1 = D:\etas\etas\Properties\AssemblyInfo.cs = [assembly: AssemblyVersion("1.0.0.1")]
-
-
- zork.Configurator.settings.programVersio
-'etas.Data.Configurator.Settings' does not contain a definition for 'programVersio'
- zork.Configurator.settings.programVersion
-{2.0.0.3}
-    Build: 0
-    Major: 2
-    MajorRevision: 0
-    Minor: 0
-    MinorRevision: 3
-    Revision: 3
-
-
-Application.ProductVersion
-"2.4.8.0"
  
 singapore geography
 -------------------
