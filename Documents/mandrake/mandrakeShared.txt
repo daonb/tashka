@@ -1,7 +1,7 @@
-vi:syntax=mkd
+# vi :syntax=mkd
 
-
-
+c# assembly version
+====================
 
 http://geekswithblogs.net/clemmon/archive/2006/01/10/65473.aspx
 
@@ -10,10 +10,6 @@ executable, the ProductVersion property and its dependent properties will use
 this value instead of the AssemblyVersion attribute value.
 
 Microsoft states that this behaviour is by design.
-
-
-etas.MainClass
-===============
 
 assembly.GetName().Version = 1.0.0.1 = D:\etas\etas\Properties\AssemblyInfo.cs = [assembly: AssemblyVersion("1.0.0.1")]
 
@@ -30,23 +26,9 @@ assembly.GetName().Version = 1.0.0.1 = D:\etas\etas\Properties\AssemblyInfo.cs =
     Revision: 3
 
 
-
 Application.ProductVersion
 "2.4.8.0"
  
-
-
-
-
-
-
-
-
-
-
-
-
-
 singapore geography
 -------------------
 
