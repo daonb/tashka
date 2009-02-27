@@ -108,6 +108,7 @@ vim nerdcommenter
 ,cu       : uncomment
 ,c<Space> : toggle
 ,cs       : comment 'sexily'
+,cm       : comment multipart (e.g. `*/ */`
 
 everyday git
 =============
