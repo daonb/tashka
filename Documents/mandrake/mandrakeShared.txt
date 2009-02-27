@@ -1,5 +1,75 @@
 # vi:syntax=mkd
 
+
+
+
+google map urls
+===============
+http://mapki.com/wiki/Google_Map_Parameters
+
+
+`http://maps.google.com/?q=Exeter+Airport&t=k`
+        
+        q=query
+        t=type
+                m=map, 
+                k=satellite, 
+                h=hybrid, 
+                p=terrain. 
+
+Choose What to Import
+=====================
+
+       [ 1 ] All 
+
+                Client      : XYZ Client (00001) [Edit]
+                Site        : XYZ Site (00001)   [Edit]
+                Certificate : ETS0000100001      [Edit]
+
+       [ 2 ] Site and Certificate Only
+
+                Client      : XYZ Client (00001) [Choose]
+                Site        : XYZ Site (00001)   [Edit]
+                Certificate : ETS0000100001      [Edit]
+
+
+       [ 3 ] Certificate Only
+
+                Client      : XYZ Client (00001) [Choose]
+                Site        : XYZ Site (00001)   [Choose]
+                Certificate : ETS0000100001      [Edit]
+
+on show:
+        a) if source_site_code exists in target, try and apply [3]
+        else
+        b) if source client_code exists in target, try and apply [2]
+        else
+        apply [3]
+
+after {edit]
+        apply the above rules again
+
+
+
+
+
+[Edit] launches UINAvigator on source dataset
+
+[Choose] launches Navigator tree for selecting client or site
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 c# assembly versions
 ====================
 
@@ -77,6 +147,13 @@ vim nerdcommenter
 
 everyday git
 =============
+
+pull:
+        git pull origin master
+
+push:
+        git commit -a
+        git push
 
 make a central repo:
 
