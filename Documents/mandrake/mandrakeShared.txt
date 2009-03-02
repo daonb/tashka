@@ -1,6 +1,15 @@
 # vi:syntax=mkd
 
+bash ls: exclude files
+----------------------
 
+all files except:
+
+        ls -I "*.bz2"
+
+be careful:
+
+        ls -I "*.jpg"|xargs rm
 
 
 google map urls
