@@ -3,6 +3,7 @@
 bash ls: exclude files
 ----------------------
 
+<<<<<<< HEAD:Documents/mandrake/mandrakeShared.txt
 all files except:
 
         ls -I "*.bz2"
@@ -10,6 +11,33 @@ all files except:
 be careful:
 
         ls -I "*.jpg"|xargs rm
+=======
+     2009/3(Mar)      
+ Su Mo Tu We Th Fr Sa 
+  1* 2  3  4  5  6  7 
+  8  9 10 11 12 13 14 
+ 15 16 17 18 19 20 21 
+ --------------------
+ 22 23 24 25 26 27 28
+ 29 30 31             
+ 
+     2009/4(Apr)      
+ Su Mo Tu We Th Fr Sa 
+           1  2  3  4 
+  5  6  7  8  9 10 11 
+ 12 13 14 15 16 17 18 
+ 19 20 21 22 23 24 25 
+ 26 27 28 29 30       
+ 
+     2009/5(May)      
+ Su Mo Tu We Th Fr Sa 
+                 1  2 
+  3  4  5  6  7  8  9 
+ 10 11 12 13 14 15 16 
+ 17 18 19 20 21 22 23 
+ 24 25 26 27 28 29 30 
+ 31                   
+>>>>>>> 50267c99bab26feacbcfc49414c081ae828cf7c2:Documents/mandrake/mandrakeShared.txt
 
 
 google map urls
@@ -26,7 +54,7 @@ http://mapki.com/wiki/Google_Map_Parameters
                 h=hybrid, 
                 p=terrain. 
 
-Choose What to Import
+ Choose What to Import
 =====================
 
        [ 1 ] All 
@@ -67,6 +95,8 @@ after {edit]
 [Choose] launches Navigator tree for selecting client or site
 
 
+
+int SITE_CODE=source.Sites[0].Row.SITE_CODE
 
 
 
