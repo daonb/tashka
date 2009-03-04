@@ -3,7 +3,6 @@
 bash ls: exclude files
 ----------------------
 
-<<<<<<< HEAD:Documents/mandrake/mandrakeShared.txt
 all files except:
 
         ls -I "*.bz2"
@@ -11,6 +10,7 @@ all files except:
 be careful:
 
         ls -I "*.jpg"|xargs rm
+
 =======
      2009/3(Mar)      
  Su Mo Tu We Th Fr Sa 
@@ -37,7 +37,6 @@ be careful:
  17 18 19 20 21 22 23 
  24 25 26 27 28 29 30 
  31                   
->>>>>>> 50267c99bab26feacbcfc49414c081ae828cf7c2:Documents/mandrake/mandrakeShared.txt
 
 
 google map urls
