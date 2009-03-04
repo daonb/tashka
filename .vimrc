@@ -140,6 +140,7 @@ set bex=.bak
 
 " if only i knew about this one at the beginning...
 imap jj <Esc>
+imap <c-j> <Esc> 
 
 let g:yankring_replace_n_pkey = '<m-p>'
 let g:yankring_replace_n_nkey = '<m-n>'

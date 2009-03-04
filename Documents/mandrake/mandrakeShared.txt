@@ -1,5 +1,47 @@
 # vi:syntax=mkd
 
+
+windows shutdown
+==================
+
+http://vlaurie.com/computers2/Articles/shortcuts2.htm
+
+hoekey
+======
+
+
+find out alt + numpad key combinations: 
+
+        charmap.exe
+
+
+[change keyboard layout] (http://groups.google.com/group/hoekey/browse_thread/thread/cd9ed3a09c0e3f50#)
+
+        Note, the files below change back and forth from Qwerty as primary,
+        with Dvorak as secondary, and vice versa.
+
+        ~D=Run|Rundll32 shell32,Control_RunDLL
+        intl.cpl,,/f:"C:\Data\Profiles\Dvorak.txt"            ; Switch to Dvorak
+
+        ~Q=Run|Rundll32 shell32,Control_RunDLL
+        intl.cpl,,/f:"C:\Data\Profiles\Qwerty.txt"            ; Switch to Qwerty
+
+        --Dvorak.txt--
+        [RegionalSettings]
+        InputLocale="0409:00000409", "0409:d0000409"
+        InputLocale_DefaultUser="0409:00000409"
+
+        --QwertyUS.txt--
+        [RegionalSettings]
+        InputLocale="0409:d0000409", "0409:00000409"
+        InputLocale_DefaultUser="0409:d0000409" 
+
+        --QwertyUK.txt--
+        [RegionalSettings]
+        InputLocale="0809:d0000809", "0809:00000809"
+        InputLocale_DefaultUser="0809:d0000809" 
+
+
 bash ls: exclude files
 ----------------------
 
@@ -10,7 +52,6 @@ all files except:
 be careful:
 
         ls -I "*.jpg"|xargs rm
-<<<<<<< HEAD:Documents/mandrake/mandrakeShared.txt
 
 =======
      2009/3(Mar)      
@@ -39,7 +80,6 @@ be careful:
  24 25 26 27 28 29 30 
  31                   
 =======
->>>>>>> 9675ed02a74bee7769756d03e8979bd05cdbeb5a:Documents/mandrake/mandrakeShared.txt
 
 
 google map urls
