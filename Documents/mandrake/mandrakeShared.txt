@@ -10,6 +10,7 @@ all files except:
 be careful:
 
         ls -I "*.jpg"|xargs rm
+<<<<<<< HEAD:Documents/mandrake/mandrakeShared.txt
 
 =======
      2009/3(Mar)      
@@ -37,6 +38,8 @@ be careful:
  17 18 19 20 21 22 23 
  24 25 26 27 28 29 30 
  31                   
+=======
+>>>>>>> 9675ed02a74bee7769756d03e8979bd05cdbeb5a:Documents/mandrake/mandrakeShared.txt
 
 
 google map urls
@@ -86,27 +89,9 @@ after {edit]
         apply the above rules again
 
 
-
-
-
 [Edit] launches UINAvigator on source dataset
 
 [Choose] launches Navigator tree for selecting client or site
-
-
-
-int SITE_CODE=source.Sites[0].Row.SITE_CODE
-
-
-
-
-
-
-
-
-
-
-
 
 c# assembly versions
 ====================
@@ -162,6 +147,10 @@ vim yankring
 =============
 after paste, press <M-P>, <M-N> to cycle through yankring
 
+capslock.vim
+============
+
+soft toggle CAPSLOCK: <c-g> c
 
 vimdiff
 ========
@@ -273,8 +262,6 @@ same name. If no refspec is used at all, git will push all “heads” (f.e.
 branches) on the local to matching heads that exist on the remote.
 
 
-
-
 git howto
 ---------
 
@@ -382,7 +369,6 @@ private clone urls begin with `git@github..`
         git@github.com:gglynne/tashka.git
 
 
-
 `git clone` works on public & private & creates a subdir `tashka`):
 
         $ git clone git://github.com/gglynne/tashka.git
@@ -404,5 +390,3 @@ to persist changes to github:
         Total 3 (delta 1), reused 0 (delta 0)
         To git@github.com:gglynne/tashka.git
            719cbd4..cddb2af  master -> master
-
-
