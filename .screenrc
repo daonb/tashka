@@ -3,6 +3,9 @@
 hardstatus alwayslastline 
 hardstatus string '%{= mK}%-Lw%{= KW}%50>%n%f* %t%{= mK}%+Lw%< %{= kG}%-=%D %d %M %Y %c:%s%{-}' 
 
+# Turn off the splash screen
+startup_message off 
+
 # save a huge scrollback buffer
 defscrollback 5000
 
@@ -15,4 +18,3 @@ bind r screen -t pyradio 0 python /home/gglynne/scripts/pyradio
 # insert timestamp
 bind d exec .!. date
 
-# bind [6~A ^u
