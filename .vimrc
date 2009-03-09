@@ -10,7 +10,10 @@
 :command! -range=% Isql :<line1>,<line2>w !./isql.py | w3m
 
 " :PyRun, run buffer through python interpreter & w3m
-:command! -range=% PyRun :<line1>,<line2>w !python %s | w3m
+:command! -range=% PyRun :<line1>,<line2>w !python % | w3m
+
+" :RubyRun, run buffer through ruby
+:command! -range=% RubyRun :<line1>,<line2>w !ruby %
 
 " :Ipy, run buffer through ipython
 :command! -range=% Ipy :!ipython -nobanner -noconfirm_exit %
@@ -182,10 +185,21 @@ map <f4> :Rgrep<CR>
 
 " f5 = RUN
 " map <f5> :w<cr>:source %<cr> | imap <f5> <esc>:w<cr>:source %<cr>
-" map <f5> :Isql<cr> | map <f5> <esc>:Isql<cr>
-" map <f5> :PyRun<cr> | map <f5> <esc>:PyRun<cr>
-" map <f5> :Ipy<cr> | map <f5> <esc>:Ipy<cr>
-" map <f5> :SendDB<cr> | map <f5> <esc>:SendDB<cr>
+
+"nmap <f5> :w<cr>:Isql<cr>
+"imap <f5> <esc>:w<cr>:Isql<cr>
+
+"nmap <f5> :w<cr>:PyRun<cr>
+"imap <f5> <esc>:w<cr>:PyRun<cr>
+
+"nmap <f5> :w<cr>:RubyRun<cr>
+"imap <f5> <esc>:w<cr>:RubyRun<cr>
+
+"nmap <f5> :w<cr>:Ipy<cr>
+"imap <f5> <esc>:w<cr>:Ipy<cr>
+
+"nmap <f5> :w<cr>:SendDB<cr>
+"imap <f5> <esc>:w<cr>:SendDB<cr>
 
 " f7 = open notes in bottom window
 map <f7> :sp notes<CR><C-w><C-r><C-w><C-w>
