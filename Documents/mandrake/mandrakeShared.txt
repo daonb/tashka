@@ -1,6 +1,41 @@
 # vi:syntax=mkd
 
 
+
+Kantou Region
+==============
+
+Gunma, 
+Tochigi, 
+Ibaraki, 
+Saitama, 
+Tokyo, 
+Chiba, 
+Kanagawa.
+
+The Japanese national government defines 
+the National Capital Region (¿¿¿) 
+as Kant¿ region plus Yamanashi Prefecture. 
+
+Chuubu Region
+==============
+http://en.wikipedia.org/wiki/Ch%C5%ABbu_region
+
+- nextdoor to Kanto
+
+
+Aichi, 
+Fukui, 
+Gifu, 
+Ishikawa, 
+Nagano, 
+Niigata, 
+Shizuoka, 
+Toyama, 
+Yamanashi, 
+and often Mie
+
+
 windows shutdown
 ==================
 
