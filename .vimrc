@@ -34,14 +34,27 @@ set scrolloff=4
 
 colorscheme darkblue
 
+" -------------------- clipboard ----------------------
 
-" -------------------- overall appearance ----------------------
+" force vim to use windows clipboard by default instead of +
+set clipboard=unnamed
+
+" Auto copy the mouse selection
+:noremap <LeftRelease> "+y<LeftRelease>
 
 " hide menu bar
 set guioptions=
 
+" Auto copy the mouse selection
+:set guioptions+=a
+
+"
+
+" -------------------- overall appearance ----------------------
+
+
 " nice big font
-set guifont=Monospace\ 16
+" set guifont=Monospace\ 16
 
 " do not wrap lines
 set nowrap

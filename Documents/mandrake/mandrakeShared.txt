@@ -1,17 +1,41 @@
 # vi:syntax=mkd
 
+visual studio defaults:
+        
+insert code snippet       : c-k c-s
+find all refernces        : c-k c-r
+close current tool window : s-Esc
+move to next tool window  : m-f6
+
+datetime
+=========
+from datetime import datetime
+
+number of days since a date in the past:
+
+        print (datetime.now() - datetime(2007,7,5)).days
+
+dateutil
+=======
+http://labix.org/python-dateutil
+
+python eggs
+-------------\
+easy_install ZSI-2.1_a1-py2.5.egg
+
+
 
 
 Kantou Region
 ==============
 
-Gunma, 
-Tochigi, 
-Ibaraki, 
-Saitama, 
-Tokyo, 
-Chiba, 
-Kanagawa.
+        Gunma, 
+        Tochigi, 
+        Ibaraki, 
+        Saitama, 
+        Tokyo, 
+        Chiba, 
+        Kanagawa.
 
 The Japanese national government defines 
 the National Capital Region (¿¿¿) 
@@ -87,34 +111,6 @@ all files except:
 be careful:
 
         ls -I "*.jpg"|xargs rm
-
-=======
-     2009/3(Mar)      
- Su Mo Tu We Th Fr Sa 
-  1* 2  3  4  5  6  7 
-  8  9 10 11 12 13 14 
- 15 16 17 18 19 20 21 
- --------------------
- 22 23 24 25 26 27 28
- 29 30 31             
- 
-     2009/4(Apr)      
- Su Mo Tu We Th Fr Sa 
-           1  2  3  4 
-  5  6  7  8  9 10 11 
- 12 13 14 15 16 17 18 
- 19 20 21 22 23 24 25 
- 26 27 28 29 30       
- 
-     2009/5(May)      
- Su Mo Tu We Th Fr Sa 
-                 1  2 
-  3  4  5  6  7  8  9 
- 10 11 12 13 14 15 16 
- 17 18 19 20 21 22 23 
- 24 25 26 27 28 29 30 
- 31                   
-=======
 
 
 google map urls
